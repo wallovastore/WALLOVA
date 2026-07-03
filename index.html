@@ -1,2 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wallova - Premium Wall Posters</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#111;color:#fff}
+header{padding:40px;text-align:center;background:#000}
+h1{margin:0;font-size:48px}
+p{color:#ccc}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:30px}
+.card{background:#1d1d1d;border-radius:12px;padding:15px;text-align:center}
+.img{height:220px;background:#333;border-radius:8px;display:flex;align-items:center;justify-content:center}
+button{background:#25D366;color:#fff;border:none;padding:10px 16px;border-radius:8px;cursor:pointer}
+footer{text-align:center;padding:20px;color:#888}
+</style>
+</head>
+<body>
+<header>
+<h1>WALLOVA</h1>
+<p>Premium Wall Posters</p>
+</header>
+<section class="grid">
+<script>
+const posters=[
+["Anime Poster","₹99"],["Car Poster","₹149"],["Aesthetic Poster","₹99"],
+["Gaming Poster","₹149"],["Movie Poster","₹199"],["Nature Poster","₹99"],
+["Motivational Poster","₹99"],["Music Poster","₹149"]
+];
+document.write(posters.map(p=>`
+<div class='card'>
+<div class='img'>${p[0]}</div>
+<h3>${p[0]}</h3>
+<p>${p[1]}</p>
+<a href="https://wa.me/91YOURNUMBER?text=Hi%20Wallova!%20I%20want%20to%20order%20${encodeURIComponent(p[0])}">
+<button>Order on WhatsApp</button></a>
+</div>`).join(""));
+</script>
+</section>
+<footer>© Wallova</footer>
+</body>
+</html>
  
